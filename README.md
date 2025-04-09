@@ -14,8 +14,8 @@ This repository contains our submission for the COMP34812 Shared Task coursework
 
 Our predictions on the test dataset are saved in:
 
-- `Group_9_A.csv` — Predictions from the fine-tuned SVM model (Category A).
-- `Group_9_C.csv` — Predictions from the fine-tuned DeBERTa-v3 model (Category C).
+- `Group_9_A.csv` — Predictions from the fine-tuned **SVM** model (Category A).
+- `Group_9_C.csv` — Predictions from the fine-tuned **DeBERTa-v3** model (Category C).
 
 Both files follow the required format and naming convention.
 
@@ -25,13 +25,16 @@ Both files follow the required format and naming convention.
 
 Our submission includes:
 
+#### Training Notebooks:
 - `Category_A_SVM_fine_tuning.ipynb` — Jupyter notebook for tuning the SVM model.
 - `Category_C_DeBERTa_v3.ipynb` — Jupyter notebook for training and evaluating the DeBERTa model.
+
+#### Demo Notebook:
 - `Demo_Code.ipynb` — Code to run inference and generate predictions using the saved SVM model and the DeBERTa model.
 
-Model files:
-- `svm_best_model.joblib` — Saved SVM model.
-- `deberta_v3_model/` — DeBERTa model checkpoint.
+#### Saved Models:
+- `svm_best_model.joblib` — Saved GridSearchCV SVM pipeline.
+- `deberta_v3_model/`  — Trained DeBERTa-v3 checkpoint directory (includes tokenizer, config, and safetensors).
 
 **Note:** All models are stored on the cloud via Google Drive due to size constraints and can be accessed via: 
 https://drive.google.com/drive/folders/1X5vCOMxn1Pi56gSiRixOX-M19jDVfMhX?usp=sharing
@@ -49,9 +52,12 @@ Each model has an associated model card in markdown format, describing:
 - Risks and limitations
 - Hardware/software setup
 
-Model card files:
-- `SVM_model_card.md`
-- `DeBERTaV3_model_card.md`
+The following markdown model cards were generated based on coursework templates and published on Hugging Face:
+
+- [`svm_model_card.md`](https://huggingface.co/tyjin020726/SVM_Evidence_Detection)
+- [`deberta_model_card.md`](https://huggingface.co/tyjin020726/DeBERTaV3_Evidence_Detection)
+
+Each card contains structured metadata, performance metrics, and references to model architecture and base repositories.
 
 ---
 
